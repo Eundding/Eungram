@@ -1,7 +1,11 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 
-
-class Main(APIView):
+class Sub(APIView):
     def get(self, request):
-        return render(request, 'templates/Eungram/main.html')
+        print("Get으로 호출")
+        return render(request, "Eungram/main.html")
+
+    def post(self, request):
+        print("Post로 호출")
+        return render(request, "Eungram/main.html")
